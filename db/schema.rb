@@ -28,11 +28,4 @@ ActiveRecord::Schema.define(version: 20140926045038) do
     t.datetime "updated_at"
   end
 
-  create_table "tests", force: true do |t|
-    t.string   "param1"
-    t.string   "param2"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
 end
