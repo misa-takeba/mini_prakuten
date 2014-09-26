@@ -1,0 +1,18 @@
+language: ruby
+rvm:
+- 2.1.2
+deploy:
+  provider: heroku
+  api_key:
+    secure: 3nSji9o4a63dT0FprF/itJF0rV2wMHcQ08hCOYf4t7IRqcVWb96vw6e1s29O022TrivBdXOyZ6spz3T69AHWCsFUoPm5LAm4nUx/NPS4P0XshSjHkFB7tocR8z2O0SKNboTed3k4bg6r6Z0kUJPYDMjrmVptYoTgebz2Mkdp0jY=
+  run:
+    - "rake db:migrate"
+    - "rake cleanup"
+  app: radiant-fjord-9562
+  on:
+    repo: esodov/mini_prakuten
+  addons:
+    postgresql: "9.3"
+  before_script:
+    - psql -c 'create database travis_ci_test;' -U postgres
+    - cp config/database.yml.travis config/database.yml
