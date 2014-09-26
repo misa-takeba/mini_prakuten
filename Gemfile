@@ -41,3 +41,4 @@ gem 'httpclient'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'rakuten_web_service'

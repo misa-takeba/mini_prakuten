@@ -7,8 +7,8 @@
 <% if ! @products.nil? %>
 <table>
 <th>楽天市場</th><th>楽天オークション</th>
-<% @products.each do |product| %>
- <tr><td><img href="<%= product.imageUrl%>"><p><%= product.name%></p><p><%= product.minPrice%></p></td><td><td></td></tr>
+<% @jsonData['Products'].each do |product| %>
+ <tr><td><img href="<%= product['Product']['smallImageUrl']%>"><p><%= product['Product']['productName']%></p><p><%= product['Product']['minPrice']%></p></td><td></td></tr>
 <% end %>
 </table>
 <% end %>
