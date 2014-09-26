@@ -4,11 +4,11 @@
   <%= submit_tag 'Search' %>
 <% end %>
 
-<% if ! @products.nil? %>
+<% if ! @jsonData.nil? %>
 <table>
 <th>楽天市場</th><th>楽天オークション</th>
 <% @jsonData['Products'].each do |product| %>
- <tr><td><img href="<%= product['Product']['smallImageUrl']%>"><p><%= product['Product']['productName']%></p><p><%= product['Product']['minPrice']%></p></td><td></td></tr>
+ <tr><td><p><%= product['Product']['productName']%></p><p><%= product['Product']['minPrice']%>円</p></td><td></td></tr>
 <% end %>
 </table>
 <% end %>

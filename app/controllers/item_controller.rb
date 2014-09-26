@@ -24,8 +24,8 @@ class ItemController < ApplicationController
       })
       #JsonをRubyで扱いやすいようにパースする
       @jsonData = JSON.parse(data)
-      #rescue HTTPClient::BadResponseError => e
-      #rescue HTTPClient::TimeoutError => e
+      rescue HTTPClient::BadResponseError => e
+      rescue HTTPClient::TimeoutError => e
     end
 
     logger.debug(@jsonData)
