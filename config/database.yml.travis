@@ -1,4 +1,4 @@
 test:
   adapter: postgresql
-  database: min_prakuten_test
+  database: mini_prakuten_test
   username: postgres
