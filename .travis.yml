@@ -11,8 +11,8 @@ deploy:
   app: radiant-fjord-9562
   on:
     repo: esodov/mini_prakuten
-  addons:
-    postgresql: "9.3"
-  before_script:
-    - psql -c 'create database mini_prakuten_test;' -U postgres
-    - cp config/database.yml.travis config/database.yml
+addons:
+  postgresql: "9.3"
+before_script:
+  - psql -c 'create database mini_prakuten_test;' -U postgres
+  - cp config/database.yml.travis config/database.yml
