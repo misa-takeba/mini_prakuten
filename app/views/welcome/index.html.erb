@@ -1,0 +1,12 @@
+<%= form_tag(:controller => "item", :action => "search") do %>
+  <%= text_field_tag :keyword, '', size: 30 %>
+  <%= submit_tag 'Search' %>
+<% end %>
+
+<table>
+<th>楽天市場</th><th>楽天オークション</th>
+<% @items.each do |item| %>
+ <tr><td><img href="<%= item.imageUrl%>"><p><%= item.name%></p><p><%= product.minPrice%></p></td><td><td></td></tr>
+<% end %>
+</table>
+
